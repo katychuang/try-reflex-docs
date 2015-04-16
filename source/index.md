@@ -42,17 +42,46 @@ import           Reflex.Dom
 
 > Make sure you've installed GHCJS.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Reflex's companion library, Reflex-DOM, contains a number of functions used to build and interact with the Document Object Model. Let's start by getting a basic app up and running.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`import Reflex.Dom`
+
+`main = mainWidget $ el "div" $ text "Welcome to Reflex"`
+
+Saving this file as `source.hs` and compiling it produces a `source.jsexe` folder (the name of the jsexe folder is based on the name of the hs file). Inside the `source.jsexe` folder you'll find `index.html`. Opening that in your browser will reveal a webpage with a single div containing the text "Welcome to Reflex".
 
 <aside class="notice">
-You must replace `meowmeowmeow` with your personal API key.
+Highlighted extra note `meowmeowmeow`.
 </aside>
 
-# CSS
+Most Reflex apps will start the same way: a call to `mainWidget` with a starting `Widget`. A `Widget` is some DOM wrapped up for easy use with Reflex. In our example, we are building the argument to `mainWidget`, (in other words, our starting `Widget`) on the same line.
+
+`el` has the type signature:
+
+```haskell
+el :: MonadWidget t m => String -> m a -> m a
+```
+
+The first argument to `el` is a `String`, which will become the tag of the html element produced. The second argument is a `Widget`, which will become the child of the element being produced. 
+
+> #### Sidebar: Interpreting the MonadWidget type
+> FRP-enabled datatypes in Reflex take an argument `t`, which identifies the FRP subsystem being used.  This ensures that wires don't get crossed if a single program uses Reflex in multiple different contexts.  You can think of `t` as identifying a particular "timeline" of the FRP system.
+> Because most simple programs will only deal with a single timeline, we won't revisit the `t` parameters in this tutorial.  As long as you make sure your `Event`, `Behavior`, and `Dynamic` values all get their `t` argument, it'll work itself out.
+
+
+# Basic HTML Elements
+
+## Body
+
+&lt;body&gt;
+
+## Div
+
+&lt;div&gt;
+
+## Anchor links
+
 
 ## Buttons
 
@@ -105,6 +134,34 @@ Disabled State
 
 
 # Components
+
+## Unordered List
+
+<div>
+  <p>Reflex is:</p>
+  <ul>
+    <li>Efficient</li>
+    <li>Higher-order</li>
+    <li>Glitch-free</li>
+  </ul>
+</div>
+
+```haskell
+main = mainWidget $ el "div" $ do
+  el "p" $ text "Reflex is:"
+  el "ul" $ do
+    el "li" $ text "Efficient"
+    el "li" $ text "Higher-order"
+    el "li" $ text "Glitch-free"
+```
+&lt;div><br />
+&nbsp;&nbsp;&lt;p>Reflex is:&lt;/p><br />
+&nbsp;&nbsp;&lt;ul><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>Efficient&lt;/li><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>Higher-order&lt;/li><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>Glitch-free&lt;/li><br />
+&nbsp;&nbsp;&lt;/ul><br />
+&lt;/div><br />
 
 ## Dropdowns
 
