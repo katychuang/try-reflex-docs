@@ -104,8 +104,24 @@ Because most simple programs will only deal with a single timeline, we won&rsquo
 <h3 id="button-tags">Button Tags</h3>
 
 <p>Use the button classes on an &lt;a&gt;, &lt;button&gt;, or &lt;input&gt; element.</p>
+<pre><code class="highlight haskell"><span class="n">main</span> <span class="o">=</span> <span class="n">mainWidget</span> <span class="o">$</span> <span class="n">el</span> <span class="s">"div"</span> <span class="o">$</span> <span class="kr">do</span>
+  <span class="kr">let</span> <span class="n">labelAttrs</span> <span class="o">=</span> <span class="s">"class"</span> <span class="o">=:</span> <span class="s">"btn btn-default"</span>
+  <span class="p">(</span><span class="n">labelTitle</span><span class="p">,</span> <span class="kr">_</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">elAttr'</span> <span class="s">"button"</span> <span class="n">labelAttrs</span> <span class="o">$</span> <span class="kr">do</span>
+    <span class="n">elAttr'</span> <span class="s">"em"</span> <span class="o">$</span> <span class="n">text</span> <span class="s">"more"</span>
+    <span class="n">elAttr</span> <span class="s">"i"</span> <span class="p">(</span><span class="s">"class"</span> <span class="o">=:</span> <span class="s">"caret"</span><span class="p">)</span> <span class="n">end</span>
+</code></pre>
 
-<p>Example:</p>
+<p><button class="btn btn-default">
+  <em>more</em>
+  <span class="caret"></span>
+</button></p>
+
+<p>&lt;button class=&ldquo;btn btn-default&rdquo;&gt;<br/>
+  &lt;em&gt;more&lt;/em&gt;<br/>
+  &lt;i class=&ldquo;caret&rdquo;&gt;&lt;/i&gt;<br/>
+&lt;/button&gt;</p>
+
+<p>More Examples:</p>
 
 <p><a class="btn" href="#" role="button">Link</a>
 <button class="btn" type="submit">Button</button>
@@ -187,6 +203,8 @@ Because most simple programs will only deal with a single timeline, we won&rsquo
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
   </ul>
 </div>
+<pre><code class="highlight haskell">
+</code></pre>
 
 <p><br/></p>
 
