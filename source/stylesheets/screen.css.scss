@@ -50,18 +50,18 @@ html, body {
 
 @mixin embossed-bg {
   @include background(
-    linear-gradient(top,
-                    rgba(#000, 0.2),
-                    rgba(#000, 0) 8px),
-    linear-gradient(bottom,
-                    rgba(#000, 0.2),
-                    rgba(#000, 0) 8px),
-    linear-gradient(top,
-                    rgba($nav-embossed-border-top, 1),
-                    rgba($nav-embossed-border-top, 0) 1.5px),
-    linear-gradient(bottom,
-                    rgba($nav-embossed-border-bottom, 1),
-                    rgba($nav-embossed-border-bottom, 0) 1.5px),
+    //linear-gradient(top,
+    //                rgba(#000, 0.2),
+    //                rgba(#000, 0) 8px),
+    // linear-gradient(bottom,
+    //                 rgba(#000, 0.2),
+    //                 rgba(#000, 0) 8px),
+    // linear-gradient(top,
+    //                 rgba($nav-embossed-border-top, 1),
+    //                 rgba($nav-embossed-border-top, 0) 1.5px),
+    // linear-gradient(bottom,
+    //                 rgba($nav-embossed-border-bottom, 1),
+    //                 rgba($nav-embossed-border-bottom, 0) 1.5px),
     $nav-subitem-bg
   );
 }

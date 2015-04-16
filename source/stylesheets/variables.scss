@@ -23,11 +23,11 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939;
+$nav-bg: #FFF; //#393939;
 $examples-bg: #393939;
 $code-bg: #292929;
 $code-annotation-bg: #1c1c1c;
-$nav-subitem-bg: #262626;
+$nav-subitem-bg: #eee; //#262626;
 $nav-active-bg: #2467af;
 $lang-select-border: #000;
 $lang-select-bg: #222;
@@ -43,7 +43,7 @@ $search-notice-bg: #c97a7e;
 // TEXT COLORS
 ////////////////////
 $main-text: #333; // main content text color
-$nav-text: #fff;
+$nav-text: #393939; //#fff;
 $nav-active-text: #fff;
 $lang-select-text: #fff; // color of unselected language tab text
 $lang-select-active-text: #fff; // color of selected language tab text
