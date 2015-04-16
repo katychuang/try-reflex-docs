@@ -54,6 +54,73 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace `meowmeowmeow` with your personal API key.
 </aside>
 
+# CSS
+
+## Buttons
+
+### Button Tags
+### Submit Button
+
+### Close Button
+
+### Button State
+
+Active State 
+
+Disabled State
+
+## Images
+
+
+### Thumbnails
+
+
+# Components
+
+## Dropdowns
+
+
+## Button Groups
+
+## Button Dropdowns
+
+## Input Groups
+
+## Navs
+
+## Navbar
+
+## Pagination
+
+## Labels
+
+## Alerts
+
+## Panels
+
+## Tabs 
+
+
+# Media Objects
+
+## Video Player Embed
+
+## Image Carousel
+
+## Document embed
+
+# More Interactions
+
+## Transitions
+
+## Modals
+
+## Popover
+
+## Collapse
+
+
+
 # Kittens
 
 ## Get All Kittens
