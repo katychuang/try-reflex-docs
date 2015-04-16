@@ -59,9 +59,40 @@ You must replace `meowmeowmeow` with your personal API key.
 ## Buttons
 
 ### Button Tags
+
+Use the button classes on an &lt;a>, &lt;button>, or &lt;input> element.
+
+Example:
+
+<a class="btn" href="#" role="button">Link</a>
+<button class="btn" type="submit">Button</button>
+<input class="btn" type="button" value="Input">
+<input class="btn" type="submit" value="Submit">
+
+&lt;a class="btn" href="#" role="button">Link&lt;/a><br/>
+&lt;button class="btn" type="submit">Button&lt;/button><br/>
+&lt;input class="btn" type="button" value="Input"><br/>
+&lt;input class="btn" type="submit" value="Submit">
+
+
+```html
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">
+```
+
 ### Submit Button
 
+<input class="btn btn-default" type="submit" value="Submit">
+
+&lt;input class="btn btn-default" type="submit" value="Submit">
+
 ### Close Button
+
+<input class="btn btn-default" type="submit" value="Close">
+
+&lt;input class="btn btn-default" type="submit" value="Close">
 
 ### Button State
 
