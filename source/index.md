@@ -1,11 +1,13 @@
 ---
-title: API Reference
+title: Reflex Reference
 
 language_tabs:
 
 
 toc_footers:
-  - <a href='#'>Download latest Reflex release</a>
+  - IRC #reflex-frp *irc.freenote.net*
+  - <a href="http://www.reddit.com/r/reflexfrp">Related Links</a>
+  - <a href='https://github.com/ryantrinkle/try-reflex'>Download latest Reflex release</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -20,7 +22,7 @@ Welcome to the try-reflex docs! You can use this guide to get information on bui
 
 We have language bindings in Shell, Haskell, and HTML! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to submit pull requests to update the information.
+It is currently still a work in progress and not ready for dissemination. 
 
 # General Overview
 
@@ -30,17 +32,9 @@ This example documentation page was created with [Slate](http://github.com/tripi
 import           Reflex.Dom
 ```
 
-```html
-
-```
-
-```shell
-# Within try-reflex, you can just run the script to install dependencies:
-
-./try-reflex
-```
-
-> Make sure you've installed GHCJS.
+> Within try-reflex, you can just run the script: `./try-reflex`
+> 
+> Make sure you've already installed GHCJS.
 
 Reflex's companion library, Reflex-DOM, contains a number of functions used to build and interact with the Document Object Model. Let's start by getting a basic app up and running.
 
@@ -82,6 +76,7 @@ The first argument to `el` is a `String`, which will become the tag of the html 
 
 ## Anchor links
 
+&lt;a&gt;
 
 ## Buttons
 
@@ -89,7 +84,26 @@ The first argument to `el` is a `String`, which will become the tag of the html 
 
 Use the button classes on an &lt;a>, &lt;button>, or &lt;input> element.
 
-Example:
+```haskell
+main = mainWidget $ el "div" $ do
+  let labelAttrs = "class" =: "btn btn-default"
+  (labelTitle, _) <- elAttr' "button" labelAttrs $ do
+    elAttr' "em" $ text "more"
+    elAttr "i" ("class" =: "caret") end
+```
+<button class="btn btn-default">
+  <em>more</em>
+  <span class="caret"></span>
+</button>
+
+&lt;button class="btn btn-default"><br/>
+  &lt;em>more&lt;/em><br/>
+  &lt;i class="caret">&lt;/i><br/>
+&lt;/button>
+
+
+
+More Examples:
 
 <a class="btn" href="#" role="button">Link</a>
 <button class="btn" type="submit">Button</button>
@@ -101,13 +115,13 @@ Example:
 &lt;input class="btn" type="button" value="Input"><br/>
 &lt;input class="btn" type="submit" value="Submit">
 
-
 ```html
 <a class="btn btn-default" href="#" role="button">Link</a>
 <button class="btn btn-default" type="submit">Button</button>
 <input class="btn btn-default" type="button" value="Input">
 <input class="btn btn-default" type="submit" value="Submit">
 ```
+
 
 ### Submit Button
 
@@ -137,7 +151,7 @@ Disabled State
 
 ## Unordered List
 
-<div>
+<div style="padding-left:28px">
   <p>Reflex is:</p>
   <ul>
     <li>Efficient</li>
@@ -165,7 +179,7 @@ main = mainWidget $ el "div" $ do
 
 ## Dropdowns
 
-<div class="dropdown">
+<div class="dropdown"  style="padding-left:28px">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
     Dropdown
     <span class="caret"></span>
@@ -177,18 +191,11 @@ main = mainWidget $ el "div" $ do
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
   </ul>
 </div>
-<div class="dropup">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
+
+```haskell
+
+```
+<br/>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span><br/>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu1"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span><span class="nt">&gt;</span><br/>
