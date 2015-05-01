@@ -26,6 +26,14 @@ It is currently still a work in progress and not ready for dissemination.
 
 # General Overview
 
+## Reflex
+
+Reflex is the FRP implementation itself.
+
+## Try-Reflex
+
+This is the installer that makes it easy to get all set up with Reflex. To get a copy of this, <a href='https://github.com/ryantrinkle/try-reflex'>Clone this repo and run the ./try-reflex script</a>.
+
 > To start, import Reflex:
 
 ```haskell
@@ -63,18 +71,17 @@ The first argument to `el` is a `String`, which will become the tag of the html 
 > FRP-enabled datatypes in Reflex take an argument `t`, which identifies the FRP subsystem being used.  This ensures that wires don't get crossed if a single program uses Reflex in multiple different contexts.  You can think of `t` as identifying a particular "timeline" of the FRP system.
 > Because most simple programs will only deal with a single timeline, we won't revisit the `t` parameters in this tutorial.  As long as you make sure your `Event`, `Behavior`, and `Dynamic` values all get their `t` argument, it'll work itself out.
 
+## Reflex-Dom
 
-# Basic HTML Elements
+This is the application of Reflex to that of web page building.
 
-## Body
+# Reflex-Dom
+
+## Creating an element tag
 
 &lt;body&gt;
 
-## Div
-
 &lt;div&gt;
-
-## Anchor links
 
 &lt;a&gt;
 
@@ -146,8 +153,6 @@ Disabled State
 
 ### Thumbnails
 
-
-# Components
 
 ## Unordered List
 
@@ -222,19 +227,20 @@ main = mainWidget $ el "div" $ do
   <span class="nt">&lt;/ul&gt;</span><br/>
 <span class="nt">&lt;/div&gt;</span>
 
-## Button Groups
-
-## Button Dropdowns
-
-## Input Groups
-
 ## Navs
 
 ## Navbar
 
 ## Pagination
 
-## Labels
+## Forms
+
+&lt;form&gt;
+&lt;/form&gt;
+
+### Input Groups
+
+&lt;input&gt;
 
 ## Alerts
 
@@ -242,16 +248,9 @@ main = mainWidget $ el "div" $ do
 
 ## Tabs 
 
-
-# Media Objects
-
-## Video Player Embed
+## Media Embeds
 
 ## Image Carousel
-
-## Document embed
-
-# More Interactions
 
 ## Transitions
 
