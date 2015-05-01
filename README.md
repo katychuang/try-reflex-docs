@@ -1,4 +1,4 @@
-This is a work in progress documentation for the [Reflex lbrary](http://hackage.haskell.org/package/reflex)
+This is a work in progress documentation for the [Reflex library](http://hackage.haskell.org/package/reflex)
 
 This documentation is built with [Slate](http://github.com/tripit/slate)
 
