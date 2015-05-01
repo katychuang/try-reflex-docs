@@ -119,12 +119,15 @@ Because most simple programs will only deal with a single timeline, we won&rsquo
 <h1 id="reflex-dom">Reflex-Dom</h1>
 
 <h2 id="creating-an-element-tag">Creating an element tag</h2>
+<pre><code class="highlight haskell"><span class="n">main</span> <span class="o">=</span> <span class="n">mainWidget</span> <span class="o">$</span> <span class="n">el</span> <span class="s">"div"</span> <span class="kr">do</span>
+  <span class="n">el</span> <span class="s">"p"</span> <span class="o">$</span> <span class="n">text</span> <span class="s">"This is legen.. wait for it..."</span>
+</code></pre>
 
-<p>&lt;body&gt;</p>
+<p>&lt;div class=&ldquo;legendary&rdquo; &gt;<br/>
+&lt;p&gt;This is legen.. wait for it&hellip;&lt;/p&gt;<br/>
+&lt;/div&gt;</p>
 
-<p>&lt;div&gt;</p>
-
-<p>&lt;a&gt;</p>
+<p>&lt;a href=&ldquo;http://reflex-frp.org&rdquo; &gt;dary&lt;a&gt;</p>
 
 <h2 id="buttons">Buttons</h2>
 
