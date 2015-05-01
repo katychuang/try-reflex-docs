@@ -18,13 +18,27 @@ search: true
 
 # Introduction
 
-Welcome to the try-reflex docs! You can use this guide to get information on building various web gui elements with Reflex-dom.
+Welcome to the try-reflex docs! 
 
-We have language bindings in Shell, Haskell, and HTML! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+You can use this guide to get information on getting started with various Reflex-FRP applications.
 
-It is currently still a work in progress and not ready for dissemination. 
+You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+
+*It is currently still a work in progress and not ready for dissemination.*
 
 # General Overview
+
+What is it?
+
+- Reflex is the FRP implementation itself.
+- Try-Reflex is the installer that makes it easy to get all set up with Reflex.
+- Reflex-Dom is the application of Reflex to that of web page building.
+
+Where to get more help?
+
+- IRC channel #reflex-frp (*irc.freenote.net*)
+- <a href="http://www.reddit.com/r/reflexfrp">Related Links</a>
+
 
 ## Reflex
 
